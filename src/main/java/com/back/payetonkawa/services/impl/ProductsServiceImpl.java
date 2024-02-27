@@ -34,22 +34,15 @@ public class ProductsServiceImpl implements ProductService {
     }
 
     @Override
-    public ProductsDto addProduct(Product product) {
-        Product productToAdd = new Product();
+    public ProductsDto addProduct(ProductsDto product) {
+        Product productToAdd = this.productMapper.productDtoToProduct(product);
 
-        productToAdd.setPrice(product.getPrice());
-        productToAdd.setCreatedAt(product.getCreatedAt());
-        productToAdd.setDetails(product.getDetails());
-        productToAdd.setPrice(product.getPrice());
-        productToAdd.setDescription(product.getDescription());
-        productToAdd.setColor(product.getColor());
-        productToAdd.setStock(product.getStock());
-
-        return this.productMapper.productToProductDto(this.productRepository.addProduct(productToAdd));
+        this.productRepository.addProduct(productToAdd);
+        return this.productMapper.productToProductDto(productToAdd);
     }
 
     @Override
-    public ProductsDto updateProduct(Product product) {
+    public ProductsDto updateProduct(ProductsDto product) {
         Product productToUpdate = this.productRepository.getProductById(product.getId());
 
         productToUpdate.setPrice(product.getPrice());
@@ -64,7 +57,7 @@ public class ProductsServiceImpl implements ProductService {
     }
 
     @Override
-    public String deleteProduct(int id) {
+    public String deleteProduct(Long id) {
         this.productRepository.deleteProduct(id);
         return "La suppression du produit a été effectuée!";
     }

@@ -10,9 +10,9 @@ public interface ProductService {
 
     public ProductsDto getProductById(Long id);
 
-    public ProductsDto addProduct(Product product);
+    public ProductsDto addProduct(ProductsDto product);
 
-    public ProductsDto updateProduct(Product product);
+    public ProductsDto updateProduct(ProductsDto product);
 
-    public String deleteProduct(int id);
+    public String deleteProduct(Long id);
 }
