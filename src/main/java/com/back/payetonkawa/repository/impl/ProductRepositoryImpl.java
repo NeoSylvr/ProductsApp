@@ -1,6 +1,6 @@
 package com.back.payetonkawa.repository.impl;
 
-import com.back.payetonkawa.model.Product;
+import com.payetonkafe.entity.model.Product;
 import com.back.payetonkawa.repository.ProductRepository;
 import org.springframework.stereotype.Repository;
 
@@ -25,7 +25,9 @@ public class ProductRepositoryImpl implements ProductRepository {
         return this.updateProduct(product);
     }
 
-    public void deleteProduct(int id) {
+    @Override
+    public void deleteProduct(Long id) {
         this.deleteProduct(id);
     }
+
 }

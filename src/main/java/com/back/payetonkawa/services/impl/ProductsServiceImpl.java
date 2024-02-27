@@ -2,7 +2,7 @@ package com.back.payetonkawa.services.impl;
 
 import com.back.payetonkawa.dto.ProductsDto;
 import com.back.payetonkawa.mapper.ProductMapper;
-import com.back.payetonkawa.model.Product;
+import com.payetonkafe.entity.model.Product;
 import com.back.payetonkawa.repository.ProductRepository;
 import com.back.payetonkawa.services.ProductService;
 import lombok.AllArgsConstructor;

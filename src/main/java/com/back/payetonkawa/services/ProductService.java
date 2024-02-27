@@ -1,7 +1,7 @@
 package com.back.payetonkawa.services;
 
 import com.back.payetonkawa.dto.ProductsDto;
-import com.back.payetonkawa.model.Product;
+import com.payetonkafe.entity.model.Product;
 
 import java.util.List;
 

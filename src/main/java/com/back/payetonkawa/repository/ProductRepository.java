@@ -1,6 +1,7 @@
 package com.back.payetonkawa.repository;
 
-import com.back.payetonkawa.model.Product;
+import com.payetonkafe.entity.model.Product;
+
 
 import java.util.List;
 
